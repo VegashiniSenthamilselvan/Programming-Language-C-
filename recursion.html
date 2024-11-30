@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>decision</title>
+    </head>
+    <style>
+    body, h1, h2, h3, p, ul, li, form, input
+    {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+   }
+
+   body{
+       text-align:justify;
+       font-family: 'Times New Roman', Times, serif;
+       font-style: normal;
+       font-size: 1rem; 
+   }
+   header {
+     background:whitesmoke;
+     color: black;
+     padding: 10px 0;
+     text-align: center;
+     font-family: 'Times New Roman', Times, serif;
+   }
+   nav {
+     background:whitesmoke;
+     padding: 10px;
+ }
+
+ nav ul {
+     list-style: none;
+     display: flex;
+     justify-content: center;
+ }
+
+ nav ul li {
+     margin: 0 15px;
+ }
+
+ nav ul li a {
+     color:black;
+     text-decoration: none;
+     font-weight: bold;
+ }
+
+ nav form {
+     margin-top: 10px;
+     text-align: center;
+ }
+
+ nav input[type="search"] {
+     padding: 5px;
+     width: 200px;
+ }
+
+ nav input[type="submit"] {
+     padding: 5px 10px;
+     background: whitesmoke;
+     color: black;
+     border: none;
+     cursor: pointer;
+ }
+
+ nav input[type="submit"]:hover {
+     background:whitesmoke;
+ }
+
+   footer {
+     background:whitesmoke;
+     color: black;
+     text-align: center;
+     padding: 10px 0;
+     margin-top: 40px;
+   }
+</style>
+<body>
+    <header>
+        <h1>C++ PROGRAMMING</h1>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="continueofheaderandfooter.html">Home</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="cplusinputoutput.html">Input&output</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="datatype.html">Datatype&variables</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="operator.html">Operators</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="decision.html">Decision Making</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="control.html">Control Statements</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="array.html">Arrays</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="string.html">Strings</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="function.html">Functions</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="recursion.html">Recursion</a></li>&nbsp;&nbsp;&nbsp;
+
+
+
+        </ul>
+        <br>
+        <form>
+          <input type="search" name="q" placeholder="Search query" />
+          <input type="submit" value="Go!" />
+        </form>
+      </nav>
+      <div class="container">
+        <br><br>
+        <center>
+            <h3>C++ Recursion</h3>
+        </center>
+        <br><br><br>
+        <center>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv-Y33SNW1HZ5cpgA4gC5d2mOTBQrsAGbujQ&s">
+        </center>
+        <br><br>
+        
+        <br>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;Assume that you have to paint a few balls. If you do it alone, it will take a lot of time. One thing you can do is to take help from your friend. Assuming that you have the same work speed, the task will be done in half of the time. Now, instead of taking help from only one of your friends, you take help from multiple friends such that each friend have only one ball to paint. The task will be done much faster as compared to when you were doing it alone. Recursion is a problem-solving technique that works in a similar way.</p>
+        <br>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;Recursion in C++ is a technique in which a function calls itself repeatedly until a given condition is satisfied. In other words, recursion is the process of solving a problem by breaking it down into smaller, simpler sub-problems.</p>
+        <br>
+        <h3>Syntax Structure of Recursion</h3>
+        <br>
+        <p>
+            return_type recursive_func  <br>{ <br>
+                .... <br>
+                   // Base Condition <br>
+                   // Recursive Case <br>
+                   .... <br>
+            } <br>
+            
+        </p>
+        <br>
+        <h3>
+            Recursive Function
+        </h3>
+        <br>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;A function that calls itself is called a recursive function. When a recursive function is called, it executes a set of instructions and then calls itself to execute the same set of instructions with a smaller input. This process continues until a base case is reached, which is a condition that stops the recursion and returns a value.</p>
+        <br>
+        <h3>Base Condition</h3><br>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;The base condition is the condition that is used to terminate the recursion. The recursive function will keep calling itself till the base condition is satisfied.</p>
+        <br>
+
+        <h3>Recursive Case</h3>
+        <br>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;Recursive case is the way in which the recursive call is present in the function. Recursive case can contain multiple recursive calls, or different parameters such that at the end, the base condition is satisfied and the recursion is terminated.</p>
+        <br>
+        <center>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeOy_5jIKG3BcMCSvfhBu5OJMVakNxjbsx3A&s">
+        </center>
+        <br><br>
+        <h3>Example of C++ Recursion</h3>
+        <br>
+        <p>
+            #include &lt;iostream &gt; <br>
+                using namespace std; <br>
+                
+                int nSum(int n) <br>
+                { <br>
+                    // base condition to terminate the recursion when N = 0 <br>
+                    if (n == 0)  <br>{ <br>
+                        return 0; <br>
+                    } <br>
+                
+                    // recursive case / recursive call <br>
+                    int res = n + nSum(n - 1); <br>
+                
+                    return res; <br>
+                } <br>
+                
+                int main() <br>
+                {<br>
+                    int n = 5;<br>
+                
+                    // calling the function<br>
+                    int sum = nSum(n);<br>
+                
+                    cout << "Sum = " << sum;<br>
+                    return 0;<br>
+                }<br>
+        </p>
+        <br>
+    </div>
+    <footer>
+      <p>©Copyright 2050 by nobody. All rights reversed.</p>
+    </footer>
+</body>
+</html>
+
+

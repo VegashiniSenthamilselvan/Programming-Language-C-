@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>decision</title>
+    </head>
+    <style>
+    body, h1, h2, h3, p, ul, li, form, input
+    {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+   }
+
+   body{
+       text-align:justify;
+       font-family: 'Times New Roman', Times, serif;
+       font-style: normal;
+       font-size: 1rem; 
+   }
+   header {
+     background:whitesmoke;
+     color: black;
+     padding: 10px 0;
+     text-align: center;
+     font-family: 'Times New Roman', Times, serif;
+   }
+   nav {
+     background:whitesmoke;
+     padding: 10px;
+ }
+
+ nav ul {
+     list-style: none;
+     display: flex;
+     justify-content: center;
+ }
+
+ nav ul li {
+     margin: 0 15px;
+ }
+
+ nav ul li a {
+     color:black;
+     text-decoration: none;
+     font-weight: bold;
+ }
+
+ nav form {
+     margin-top: 10px;
+     text-align: center;
+ }
+
+ nav input[type="search"] {
+     padding: 5px;
+     width: 200px;
+ }
+
+ nav input[type="submit"] {
+     padding: 5px 10px;
+     background: whitesmoke;
+     color: black;
+     border: none;
+     cursor: pointer;
+ }
+
+ nav input[type="submit"]:hover {
+     background:whitesmoke;
+ }
+
+   footer {
+     background:whitesmoke;
+     color: black;
+     text-align: center;
+     padding: 10px 0;
+     margin-top: 40px;
+   }
+</style>
+<body>
+    <header>
+        <h1>C++ PROGRAMMING</h1>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="continueofheaderandfooter.html">Home</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="cplusinputoutput.html">Input&output</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="datatype.html">Datatype&variables</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="operator.html">Operators</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="decision.html">Decision Making</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="control.html">Control Statements</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="array.html">Arrays</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="string.html">Strings</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="function.html">Functions</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="recursion.html">Recursion</a></li>&nbsp;&nbsp;&nbsp;
+
+
+
+        </ul>
+        <br>
+        <form>
+          <input type="search" name="q" placeholder="Search query" />
+          <input type="submit" value="Go!" />
+        </form>
+      </nav>
+      <div class="container">
+        <br><br>
+        <center>
+            <h3>C++ Loops</h3><br>
+        </center>
+        
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;In Programming, sometimes there is a need to perform some operation more than once or (say) n number of times. Loops come into use when we need to repeatedly execute a block of statements. </p>
+        <br>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;In Loop, the statement needs to be written only once and the loop will be executed 10 times as shown below.  In computer programming, a loop is a sequence of instructions that is repeated until a certain condition is reached. </p>
+        <br>
+        <b> &nbsp;&nbsp;&nbsp;&nbsp;There are mainly two types of loops:  
+        </b>
+        <ol>
+            <li><b>&nbsp;&nbsp;&nbsp;&nbsp;Entry Controlled loops:</b>&nbsp;In this type of loop, the test condition is tested before entering the loop body. For Loop and While Loop is entry-controlled loops.</li><br>
+            <li><b>&nbsp;&nbsp;&nbsp;&nbsp;Exit Controlled Loops: </b>&nbsp;In this type of loop the test condition is tested or evaluated at the end of the loop body. Therefore, the loop body will execute at least once, irrespective of whether the test condition is true or false. the do-while loop is exit controlled loop.
+            </li>
+        </ol>
+        <br>
+        <center>
+            <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20191128194516/Cpp-loops.png">
+        </center>
+        <br><br>
+        <h3>For Loop</h3>
+        <br>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;A For loop is a repetition control structure that allows us to write a loop that is executed a specific number of times. The loop enables us to perform n number of steps together in one line. </p>
+        <br>
+        <b>Syntax</b><br>
+        <p>
+            for (initialization expr; test expr; update expr) <br>
+{     <br>
+     // body of the loop <br>
+     // statements we want to execute <br>
+} <br>
+        </p>
+        <br>
+        
+            <b>Example</b>
+            <br>
+            <p>
+                #include &lt; iostream &gt;<br>
+                    using namespace std; <br>
+                     
+                    int main() <br>
+                    { <br>
+                        for (int i = 1; i <= 5; i++)  <br>{ <br>
+                            cout << "Hello World\n"; <br>
+                        } <br>
+                     
+                        return 0; <br>
+                    }
+            </p>
+       <br>
+       <h3>While Loop</h3>
+       <br>
+       <p>&nbsp;&nbsp;&nbsp;&nbsp;While studying for loop we have seen that the number of iterations is known beforehand, i.e. the number of times the loop body is needed to be executed is known to us. while loops are used in situations where we do not know the exact number of iterations of the loop beforehand. The loop execution is terminated on the basis of the test conditions.
+        We have already stated that a loop mainly consists of three statements – initialization expression, test expression, and update expression. The syntax of the three loops – For, while, and do while mainly differs in the placement of these three statements. </p>
+       <br>
+       <b>Syntax</b><br>
+       <p>initialization expression; <br>
+        while (test_expression) <br>
+        { <br>
+           // statements <br>
+         
+          update_expression; <br>
+        } <br></p>
+    <br>
+    <b>Example</b>   <br>
+    <p>
+        #include &lt; iostream &gt;   <br>
+            using namespace std;   <br>
+             
+            int main()   <br>
+            {   <br>
+                // initialization expression   <br>
+                int i = 1;   <br>
+             
+                // test expression   <br>
+                while (i < 6)    <br>{   <br>
+                    cout << "Hello World\n";   <br>
+             
+                    // update expression   <br>
+                    i++;   <br>
+                }   <br>
+             
+                return 0;   <br>
+            }   <br>
+    </p>
+    <br>
+    <h3>Do-while loop</h3>
+    <br>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;In Do-while loops also the loop execution is terminated on the basis of test conditions. The main difference between a do-while loop and the while loop is in the do-while loop the condition is tested at the end of the loop body, i.e do-while loop is exit controlled whereas the other two loops are entry-controlled loops. 
+        Note: In a do-while loop, the loop body will execute at least once irrespective of the test condition.</p>
+        <br>
+        <b>Syntax</b>
+        <br>
+        <p>
+            initialization expression; <br>
+do <br>
+{ <br>
+   // statements <br>
+   update_expression; <br>
+} while (test_expression); <br>
+        </p> <br>
+        <b>Example</b>
+        <br>
+        <p>
+
+            int main()<br>
+{<br>
+    int i = 2; // Initialization expression<br>
+ 
+    do <br>{<br>
+        // loop body<br>
+        cout << "Hello World\n";<br>
+ 
+        // update expression<br>
+        i++;<br>
+ 
+    } <br>while (i < 1); // test expression<br>
+ 
+    return 0;<br>
+}
+        </p>
+        <br>
+        <h3>Nested Loops</h3><br>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;Nested loop means a loop statement inside another loop statement. That is why nested loops are also called as “loop inside loop“.
+        </p> 
+        <br>
+        <b>Syntax</b>
+        <br>
+        <p>
+            for ( initialization; condition; increment )<br> {<br>
+
+                for ( initialization; condition; increment ) <br>{<br>
+                   
+                   // statement of inside loop<br>
+                }<br>
+             
+                // statement of outer loop<br>
+             }<br>
+        </p>
+        <br>
+        <h3>
+            Example
+        </h3>
+        <br>
+        <p>
+            int main() <br>
+{ <br>
+  
+    int i, j; <br>
+  
+    // Declare the matrix<br> 
+    int matrix[ROW][COL] = { { 1, 2, 3 }, <br>
+                             { 4, 5, 6 }, <br>
+                             { 7, 8, 9 } }; <br>
+    cout << "Given matrix is \n"; <br>
+  
+    // Print the matrix using nested loops<br> 
+    for (i = 0; i < ROW; i++)<br> { <br>
+  
+        for (j = 0; j < COL; j++) <br>
+            cout << matrix[i][j]; <br>
+  
+        cout << "\n"; <br>
+    } <br>
+  
+    return 0; <br>
+} 
+        </p>
+    
+      
+</div>
+    <footer>
+      <p>©Copyright 2050 by nobody. All rights reversed.</p>
+    </footer>
+</body>
+</html>
+
+

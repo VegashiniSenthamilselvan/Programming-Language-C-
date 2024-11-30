@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>decision</title>
+    </head>
+    <style>
+    body, h1, h2, h3, p, ul, li, form, input
+    {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+   }
+
+   body{
+       text-align:justify;
+       font-family: 'Times New Roman', Times, serif;
+       font-style: normal;
+       font-size: 1rem; 
+   }
+   header {
+     background:whitesmoke;
+     color: black;
+     padding: 10px 0;
+     text-align: center;
+     font-family: 'Times New Roman', Times, serif;
+   }
+   nav {
+     background:whitesmoke;
+     padding: 10px;
+ }
+
+ nav ul {
+     list-style: none;
+     display: flex;
+     justify-content: center;
+ }
+
+ nav ul li {
+     margin: 0 15px;
+ }
+
+ nav ul li a {
+     color:black;
+     text-decoration: none;
+     font-weight: bold;
+ }
+
+ nav form {
+     margin-top: 10px;
+     text-align: center;
+ }
+
+ nav input[type="search"] {
+     padding: 5px;
+     width: 200px;
+ }
+
+ nav input[type="submit"] {
+     padding: 5px 10px;
+     background: whitesmoke;
+     color: black;
+     border: none;
+     cursor: pointer;
+ }
+
+ nav input[type="submit"]:hover {
+     background:whitesmoke;
+ }
+
+   footer {
+     background:whitesmoke;
+     color: black;
+     text-align: center;
+     padding: 10px 0;
+     margin-top: 40px;
+   }
+</style>
+<body>
+    <header>
+        <h1>C++ PROGRAMMING</h1>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="continueofheaderandfooter.html">Home</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="cplusinputoutput.html">Input&output</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="datatype.html">Datatype&variables</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="operator.html">Operators</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="decision.html">Decision Making</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="control.html">Control Statements</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="array.html">Arrays</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="string.html">Strings</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="function.html">Functions</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="recursion.html">Recursion</a></li>&nbsp;&nbsp;&nbsp;
+
+
+
+        </ul>
+        <br>
+        <form>
+          <input type="search" name="q" placeholder="Search query" />
+          <input type="submit" value="Go!" />
+        </form>
+      </nav>
+      <div class="container">
+        <br><br>
+        <center>
+            <h3>Decision Making in C++</h3>
+        </center>
+        
+        <br>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;Decision-making in C++ involves the usage of conditional statements (also called decision control statements) to execute specific blocks of code primarily based on given situations and their results.</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;So basically, in decision-making, we evaluate the conditions and make a decision about which part of the code should be executed or not. It allows selective code execution which is crucial for controlling the flow of a program and making it more dynamic.</p>
+        <br>
+        <center>
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240115114549/cpp-conditional-statements.webp">
+        </center>
+        <br><br>
+        <h3>Types of Decision-Making Statements in C++</h3>
+        <br>
+        <ol>
+            <li> &nbsp;&nbsp;&nbsp;&nbsp;if Statement</li><br>
+            <li> &nbsp;&nbsp;&nbsp;&nbsp;if-else Statement</li><br>
+            <li> &nbsp;&nbsp;&nbsp;&nbsp;if-else-if Ladder</li><br>
+            <li> &nbsp;&nbsp;&nbsp;&nbsp;Nested if Statement</li><br>
+            <li> &nbsp;&nbsp;&nbsp;&nbsp;switch Statement</li><br>
+            <li> &nbsp;&nbsp;&nbsp;&nbsp;Conditional Operator</li><br>
+            <li> &nbsp;&nbsp;&nbsp;&nbsp;Jump Statements: break, continue, go, return</li><br>
+
+        </ol>
+        <h3>if in C++</h3>
+        <br>
+        <p> &nbsp;&nbsp;&nbsp;&nbsp;In C++, the if statement is the simplest decision-making statement. It allows the execution of a block of code if the given condition is true. The body of the ‘if’ statement is executed only if the given condition is true.
+        </p><br>
+        <b>Syntax of if in C++</b><br>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;
+            if (condition)<br> {<br>
+                // code to be executed if the condition is true<br>
+             }
+        </p>
+        <br>
+        <b>Example</b>
+        <br>
+        <p>
+            #include &lt; iostream &gt;<br>
+                using namespace std; <br>
+                  
+                int main() <br>
+                { <br>
+                    int age = 19; <br>
+                    if (age > 18) <br>{ <br>
+                        cout << "allowed to vote" << endl;<br> 
+                    } <br>
+                    return 0;<br> 
+                }
+        </p>
+           <br>
+           <h3> if-else in C++</h3><br>
+           <p>&nbsp;&nbsp;&nbsp;&nbsp;The if-else decision-making statement allows us to make a decision based on the evaluation of a given condition. If the given condition evaluates to true then the code inside the ‘if’ block is executed and in case the condition is false, the code inside the ‘else’ block is executed.</p>
+           <br>
+           <b>Syntax</b>
+           <br>
+           <p>
+            if (condition)<br> {<br> 
+                // Code to be executed if the condition is true<br> 
+            }<br> 
+            else<br>  {<br> 
+                 // Code to be executed if the condition is false<br> 
+             }<br> 
+           </p>
+           <br>
+           <b>Example</b>
+           <p>
+            #include &gt;iostream &lt;<br>
+                using namespace std; <br>
+                int main() <br>
+                { <br>
+                    int num = 5; <br>
+                  
+                    // Using if-else to determine if the number is positive <br>
+                    // or non positive <br>
+                    if (num > 0) <br>{ <br>
+                        cout << "number is positive." << endl; <br>
+                    } <br>
+                    else <br>{<br> 
+                        cout << "number is non-positive." << endl; <br>
+                    } <br>
+                    return 0;<br> 
+                }
+           </p>
+           <br>
+           <h3>if-else if Ladder in C++</h3><br>
+           <p>&nbsp;&nbsp;&nbsp;&nbsp;The if-else-if statements allow us to include additional situations after the preliminary if condition. The ‘else if’ condition is checked only if the above condition is not true. , and the `else` is the statement that will be executed if none of the above conditions is true. If some condition is true, then no only the associated block is executed.</p>
+           <br>
+           <b>syntax</b>
+           <p>
+            if (condition1) <br>{<br>
+                // code to be executed if condition1 is true
+          }<br>
+          else if (condition2) <br>{<br>
+                // code to be executed if condition2 is true<br>
+          }<br>
+          else <br>{<br>
+                // code to be executed if  both the condition is false<br>
+          }<br>
+           </p>
+           <br>
+           <b>Example</b><br>
+           <p>
+            int main() <br>
+{ <br>
+    int age = 18; <br>
+  
+    // if this condition is true child is printed <br>
+    if (age < 13) <br>{ <br>
+        cout << "child" << endl; <br>
+    } <br>
+    // if above above if statement is not true then we check <br>
+    // this else if condition if it evalutes to true print <br>
+    // growing age <br>
+    else if (age >= 1 and age <= 18) <br>{ <br>
+        cout << "Growing stage" << endl; <br>
+    } <br>
+  
+    // if none of above condition is true print adult <br>
+    else <br>{ <br>
+        cout << "adult" << endl;<br> 
+    } <br>
+    return 0; <br>
+}
+</p>
+<br><br>
+<h3> Nested if-else in C++</h3><br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;The Nested if-else statement contains an ‘if’ statement inside another ‘if’ statement. This structure lets in more complex selection-making by way of comparing multiple conditions. In this type of statement, multiple conditions are checked, and then the body of the last if statement is executed.</p>
+<br>
+<b>Syntax</b>
+<br>
+<p>
+    if (condition1)<br> {<br>
+        // code to be executed if condition 1 is true<br>
+        if (condition2)<br> {<br>
+             // code to be executed when condition 2 is true.<br>
+       }<br>
+      else <br>{<br>
+             // code to be executed if condition1 is true but condition2 is false.<br>
+       }<br>
+ }<br>
+ else <br>{<br>
+       // code to be executed when condition 1 is false<br>
+ }<br>
+</p> 
+<br>
+<h3>Switch Statement in C++</h3><br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;In C++, the switch statement is used when multiple situations need to be evaluated primarily based on the value of a variable or an expression. switch statement acts as an alternative to multiple if statements or if-else ladder and has a cleaner structure and it is easy for handling multiple conditions.</p>
+<br>
+<b>Syntax of C++ switch</b><br>
+<p>
+
+    switch (expression) <br>{<br>
+        case value1: <br>
+            // code to be executed if the value of expression is value1.<br>
+            break;<br>
+        case value2:<br>
+            // code to be executed if the value of expression is value2.<br>
+            break;<br>
+        //…..<br>
+        default:<br>
+            // code to be executed if expression doesn't match any case.<br>
+      }
+</p> 
+<br>
+<b>Example</b><br>
+<p>
+
+<br>
+int main() <br>
+{ <br>
+    char input = 'B'; <br>
+    switch (input) <br>{ <br>
+    // if the input character is A then print GFG <br>
+    case &nbsp;'A': <br>
+        cout << "GFG" << endl;<br> 
+        break;<br> 
+  
+    // if the input character is B then print GeeksforGeeks <br>
+    case &nbsp;'B': <br>
+        cout << "GeeksforGeeks" << endl; <br>
+        break; <br>
+    default: <br>
+        // if th einput character is invalid then print <br>
+        // invalid input <br>
+        cout << "invalid input" << endl; <br>
+    } <br>
+    return 0;<br> 
+}
+</p>      
+</div>
+    <footer>
+      <p>©Copyright 2050 by nobody. All rights reversed.</p>
+    </footer>
+</body>
+</html>
+
+

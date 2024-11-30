@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>decision</title>
+    </head>
+    <style>
+    body, h1, h2, h3, p, ul, li, form, input
+    {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+   }
+
+   body{
+       text-align:justify;
+       font-family: 'Times New Roman', Times, serif;
+       font-style: normal;
+       font-size: 1rem; 
+   }
+   header {
+     background:whitesmoke;
+     color: black;
+     padding: 10px 0;
+     text-align: center;
+     font-family: 'Times New Roman', Times, serif;
+   }
+   nav {
+     background:whitesmoke;
+     padding: 10px;
+ }
+
+ nav ul {
+     list-style: none;
+     display: flex;
+     justify-content: center;
+ }
+
+ nav ul li {
+     margin: 0 15px;
+ }
+
+ nav ul li a {
+     color:black;
+     text-decoration: none;
+     font-weight: bold;
+ }
+
+ nav form {
+     margin-top: 10px;
+     text-align: center;
+ }
+
+ nav input[type="search"] {
+     padding: 5px;
+     width: 200px;
+ }
+
+ nav input[type="submit"] {
+     padding: 5px 10px;
+     background: whitesmoke;
+     color: black;
+     border: none;
+     cursor: pointer;
+ }
+
+ nav input[type="submit"]:hover {
+     background:whitesmoke;
+ }
+
+   footer {
+     background:whitesmoke;
+     color: black;
+     text-align: center;
+     padding: 10px 0;
+     margin-top: 40px;
+   }
+</style>
+<body>
+    <header>
+        <h1>C++ PROGRAMMING</h1>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="continueofheaderandfooter.html">Home</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="cplusinputoutput.html">Input&output</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="datatype.html">Datatype&variables</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="operator.html">Operators</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="decision.html">Decision Making</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="control.html">Control Statements</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="array.html">Arrays</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="string.html">Strings</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="function.html">Functions</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="recursion.html">Recursion</a></li>&nbsp;&nbsp;&nbsp;
+
+
+
+        </ul>
+        <br>
+        <form>
+          <input type="search" name="q" placeholder="Search query" />
+          <input type="submit" value="Go!" />
+        </form>
+      </nav>
+      <div class="container">
+        <br><br>
+        <center>
+            <h3>
+                Functions in C++
+            </h3>
+        </center>
+        
+        <br>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;A function is a set of statements that takes input, does some specific computation, and produces output. The idea is to put some commonly or repeatedly done tasks together to make a function so that instead of writing the same code again and again for different inputs, we can call this function.
+            In simple terms, a function is a block of code that runs only when it is called.
+        </p>
+        <br>
+        <h3>Syntax:</h3>
+        <br>
+        <center>
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20220719131329/syntaxofFunction-660x214.png">
+        </center>
+        <br><br>
+        <h3>Example</h3><br>
+        <p>
+            #include &lt;iostream &gt;<br>
+                using namespace std;<br>
+                 
+                // Following function that takes two parameters 'x' and 'y'<br>
+                // as input and returns max of two input numbers<br>
+                int max(int x, int y)<br>
+                {<br>
+                    if (x > y)<br>
+                        return x;<br>
+                    else<br>
+                        return y;<br>
+                }<br>
+                 
+                // main function that doesn't receive any parameter and<br>
+                // returns integer<br>
+                int main()<br>
+                {<br>
+                    int a = 10, b = 20;<br>
+                    <br>
+                    // Calling above function to find max of 'a' and 'b'<br>
+                    int m = max(a, b);<br>
+                 
+                    cout << "m is " << m;<br>
+                    return 0;<br>
+                }<br>
+        </p>
+        <br>
+        <br>
+        <h3>Function Declaration</h3>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;A function declaration tells the compiler about the number of parameters, data types of parameters, and returns type of function. Writing parameter names in the function declaration is optional but it is necessary to put them in the definition. Below is an example of function declarations. (parameter names are not present in the below declarations) 
+        </p>
+        <center>
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20220719123136/FunctionPrototypeincppmin-660x330.png">
+        </center>
+        <br>
+        <h3>Types of Functions</h3>
+        <br>
+        <center>
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20220719123505/Typesoffunction-660x248.png">
+        </center>
+        <br><br>
+        <h3>User Defined Function</h3>
+        <br>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;User-defined functions are user/customer-defined blocks of code specially customized to reduce the complexity of big programs. They are also commonly known as “tailor-made functions” which are built only to satisfy the condition in which the user is facing issues meanwhile reducing the complexity of the whole program.</p>
+        <br>
+        <h3>Library functions</h3><br>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;Library functions are also called “built-in Functions“. These functions are part of a compiler package that is already defined and consists of a special function with special and different meanings. Built-in Function gives us an edge as we can directly use them without defining them whereas in the user-defined function we have to declare and define a function before using them. 
+            For Example: sqrt(), setw(), strcat(), etc.</p>
+            <br>
+            <h3>Function Definition</h3>
+            <br>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;Pass by value is used where the value of x is not modified using the function fun().</p>
+           <br>
+            <h3>
+                Example
+            </h3>
+            <br>
+            <p>
+                
+
+// C++ Program to demonstrate function definition <br>
+#include &lt;iostream &gt; <br>
+using namespace std; <br>
+ 
+void fun(int x) <br>
+{ <br>
+    // definition of <br>
+    // function <br>
+    x = 30; <br>
+} <br>
+ 
+int main() <br>
+{ <br>
+    int x = 20; <br>
+    fun(x); <br>
+    cout << "x = " << x; <br>
+    return 0; <br>
+} <br>
+            </p>
+</div>
+    <footer>
+      <p>©Copyright 2050 by nobody. All rights reversed.</p>
+    </footer>
+</body>
+</html>
+
+

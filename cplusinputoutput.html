@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>input&putput</title>
+    <style>
+        body, h1, h2, h3, p, ul, li, form, input
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+       }
+    
+       body{
+           text-align:justify;
+           font-family: 'Times New Roman', Times, serif;
+           font-style: normal;
+           font-size: 1rem; 
+       }
+       header {
+         background:whitesmoke;
+         color: black;
+         padding: 10px 0;
+         text-align: center;
+         font-family: 'Times New Roman', Times, serif;
+       }
+       nav {
+         background:whitesmoke;
+         padding: 10px;
+     }
+    
+     nav ul {
+         list-style: none;
+         display: flex;
+         justify-content: center;
+     }
+    
+     nav ul li {
+         margin: 0 15px;
+     }
+    
+     nav ul li a {
+         color:black;
+         text-decoration: none;
+         font-weight: bold;
+     }
+    
+     nav form {
+         margin-top: 10px;
+         text-align: center;
+     }
+    
+     nav input[type="search"] {
+         padding: 5px;
+         width: 200px;
+     }
+    
+     nav input[type="submit"] {
+         padding: 5px 10px;
+         background: whitesmoke;
+         color: black;
+         border: none;
+         cursor: pointer;
+     }
+    
+     nav input[type="submit"]:hover {
+         background:whitesmoke;
+     }
+    
+       footer {
+         background:whitesmoke;
+         color: black;
+         text-align: center;
+         padding: 10px 0;
+         margin-top: 40px;
+       }
+    </style>
+    </head>
+    <body>
+        <header>
+            <h1>C++ PROGRAMMING</h1>
+          </header>
+          <nav>
+            <ul>
+              <li><a href="continueofheaderandfooter.html">Home</a></li>&nbsp;&nbsp;&nbsp;
+              <li><a href="cplusinputoutput.html">Input&output</a></li>&nbsp;&nbsp;&nbsp;
+              <li><a href="datatype.html">Datatype&variables</a></li>&nbsp;&nbsp;&nbsp;
+              <li><a href="operator.html">Operators</a></li>&nbsp;&nbsp;&nbsp;
+              <li><a href="decision.html">Decision Making</a></li>&nbsp;&nbsp;&nbsp;
+              <li><a href="control.html">Control Statements</a></li>&nbsp;&nbsp;&nbsp;
+              <li><a href="array.html">Arrays</a></li>&nbsp;&nbsp;&nbsp;
+              <li><a href="string.html">Strings</a></li>&nbsp;&nbsp;&nbsp;
+              <li><a href="function.html">Functions</a></li>&nbsp;&nbsp;&nbsp;
+              <li><a href="recursion.html">Recursion</a></li>&nbsp;&nbsp;&nbsp;
+
+
+
+            </ul>
+            <br>
+            <form>
+              <input type="search" name="q" placeholder="Search query" />
+              <input type="submit" value="Go!" />
+            </form>
+          </nav>
+          <br><br>
+          <div class="container">
+            <center>
+              <h3>Input & Ouput in C++</h3>
+            </center><br><br>
+            <h3>C++ Basic Syntax</h3><br>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;C++ is a general-purpose, object-oriented programming language. It was developed in 1979 by Bjarne Stroustrup at AT & T Bell Laboratory. It is a high-level programming language & advanced version of C programming language. As Compared to other programming languages like Java, and Python, it is the fastest programming language.</p>
+            <br>
+            <h3>What is Syntax?</h3><br>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;Syntax refers to the rules and regulations for writing statements in a programming language. They can also be viewed as the grammatical rules defining the structure of a programming language.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;The C++ language also has its syntax for the functionalities it provides. Different statements have different syntax specifying their usage but C++ programs also have basic syntax rules that are followed throughout all the programs.</p>
+            <center>
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221226180234/Structure-of-C-Program-(1).png">
+
+            </center><br>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;The image above shows the basic C++ program that contains header files, main function, namespace declaration, etc. Let’s try to understand them one by one.</p>
+            <ol>
+                <b><li>HEADER FILE</li></b><br>
+                <p>&nbsp;The header files contain the definition of the functions and macros we are using in our program. They are defined on the top of the C++ program.</p><br>
+                <p>&nbsp;In line #1, we used the #include  <iostream> statement to tell the compiler to include an iostream header file library which stores the definition of the cin and cout standard input/output streams that we have used for input and output. #include is a preprocessor directive using which we import header files.</p><br>
+                <b>Syntax:</b><br>
+                <p>#include &lt;library_name&gt;</p>
+                <br>
+                <b><li>NAMESPACE</li></b><br>
+                <p>A namespace in C++ is used to provide a scope or a region where we define identifiers. It is used to avoid name conflicts between two identifiers as only unique names can be used as identifiers.</p><br>
+                <p>In line #2, we have used the using namespace std statement for specifying that we will be the standard namespace where all the standard library functions are defined.</p><br>
+                <b>Syntax:</b><br>
+                <p>using namespace std;</p><br>
+                <li><b>MAIN FUNCTION</b></li><br>
+                <p>Functions are basic building blocks of a C++ program that contains the instructions for performing some specific task. Apart from the instructions present in its body, a function definition also contains information about its return type and parameters. To know more about C++ functions, please refer to the article Functions in C++.</p><br>
+                <p>In line #3, we defined the main function as int main(). The main function is the most important part of any C++ program. The program execution always starts from the main function. All the other functions are called from the main function. In C++, the main function is required to return some value indicating the execution status.</p><br>
+                <b>Syntax:</b><br>
+                <p>
+                int main() {<br>
+
+                    ... code ....<br>
+                    return 0;<br>
+                }
+            </p><br>
+                <b><li>SEMICOLONS</li></b><br>
+                <p>As you may have noticed by now, each statement in the above code is followed by a ( ; ) semicolon symbol. It is used to terminate each line of the statement of the program. When the compiler sees this semicolon, it terminates the operation of that line and moves to the next line.</p><br>
+                <b>Syntax:</b><br>
+                <p>any_statement ;</p><br>
+            </ol>
+            <h3>Basic Input / Output in C++</h3><br>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;C++ comes with libraries that provide us with many ways for performing input and output. In C++ input and output are performed in the form of a sequence of bytes or more commonly known as streams.</p>
+            <br>
+            <ul>
+                <li><b>&nbsp;&nbsp;&nbsp;&nbsp;Input Stream:</b>&nbsp;If the direction of flow of bytes is from the device(for example, Keyboard) to the main memory then this process is called input.</li><br>
+                <li><b>&nbsp;&nbsp;&nbsp;&nbsp;Output Stream: </b>&nbsp; If the direction of flow of bytes is opposite, i.e. from main memory to device( display screen ) then this process is called output.</li><br>
+            </ul>
+            <h3>Header files available in C++ for Input/Output operations are: </h3>
+            <br>
+            <ul>
+            <li><b>&nbsp;&nbsp;&nbsp;&nbsp;iostream:</b>&nbsp;iostream stands for standard input-output stream. This header file contains definitions of objects like cin, cout, cerr, etc.</li><br>
+            <li><b>&nbsp;&nbsp;&nbsp;&nbsp;iomanip:</b>&nbsp;iomanip stands for input-output manipulators. The methods declared in these files are used for manipulating streams. This file contains definitions of setw, setprecision, etc.</li><br>
+          <li><b>&nbsp;&nbsp;&nbsp;&nbsp;fstream: </b>&nbsp;This header file mainly describes the file stream. This header file is used to handle the data being read from a file as input or data being written into the file as output.</li>
+        </ul>
+        <br>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;In C++ after the header files, we often use ‘using namespace std;‘. The reason behind it is that all of the standard library definitions are inside the namespace std. As the library functions are not defined at global scope, so in order to use them we use namespace std.</p>
+          <br>
+          <h3>Code:</h3>
+          <br>
+        <p>
+            #include &lt;iostream&gt;<br>
+                using namespace std;<br><br>
+                 
+                int main()<br>
+                {<br>
+                    int age;<br>
+                 
+                    cout << "Enter your age:";<br>
+                    cin >> age;<br>
+                    cout << "\nYour age is: " << age;<br>
+                 
+                    return 0;<br>
+                }
+        </p>
+        <br>
+        <h3>INPUT:</h3><br>
+        <P>18</P><br>
+        <h3>OUtPUT:</h3><br>
+        <p>Enter your age:</p>
+        <p>Your age is: 18</p>
+        </div>
+          <footer>
+            <p>©Copyright 2050 by nobody. All rights reversed.</p>
+          </footer>
+    </body>
+</html>

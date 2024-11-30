@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>decision</title>
+    </head>
+    <style>
+    body, h1, h2, h3, p, ul, li, form, input
+    {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+   }
+
+   body{
+       text-align:justify;
+       font-family: 'Times New Roman', Times, serif;
+       font-style: normal;
+       font-size: 1rem; 
+   }
+   header {
+     background:whitesmoke;
+     color: black;
+     padding: 10px 0;
+     text-align: center;
+     font-family: 'Times New Roman', Times, serif;
+   }
+   nav {
+     background:whitesmoke;
+     padding: 10px;
+ }
+
+ nav ul {
+     list-style: none;
+     display: flex;
+     justify-content: center;
+ }
+
+ nav ul li {
+     margin: 0 15px;
+ }
+
+ nav ul li a {
+     color:black;
+     text-decoration: none;
+     font-weight: bold;
+ }
+
+ nav form {
+     margin-top: 10px;
+     text-align: center;
+ }
+
+ nav input[type="search"] {
+     padding: 5px;
+     width: 200px;
+ }
+
+ nav input[type="submit"] {
+     padding: 5px 10px;
+     background: whitesmoke;
+     color: black;
+     border: none;
+     cursor: pointer;
+ }
+
+ nav input[type="submit"]:hover {
+     background:whitesmoke;
+ }
+
+   footer {
+     background:whitesmoke;
+     color: black;
+     text-align: center;
+     padding: 10px 0;
+     margin-top: 40px;
+   }
+</style>
+<body>
+    <header>
+        <h1>C++ PROGRAMMING</h1>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="continueofheaderandfooter.html">Home</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="cplusinputoutput.html">Input&output</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="datatype.html">Datatype&variables</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="operator.html">Operators</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="decision.html">Decision Making</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="control.html">Control Statements</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="array.html">Arrays</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="string.html">Strings</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="function.html">Functions</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="recursion.html">Recursion</a></li>&nbsp;&nbsp;&nbsp;
+
+
+
+        </ul>
+        <br>
+        <form>
+          <input type="search" name="q" placeholder="Search query" />
+          <input type="submit" value="Go!" />
+        </form>
+      </nav>
+      <div class="container">
+        <br><br>
+        <center>
+          <h3>Strings in C++</h3>
+        </center>
+       
+       <br>
+       <p>&nbsp;&nbsp;&nbsp;&nbsp;C++ strings are sequences of characters stored in a char array. Strings are used to store words and text. They are also used to store data, such as numbers and other types of information. Strings in C++ can be defined either using the std::string class or the C-style character arrays.</p>
+       <br>
+       <center>
+        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221229144929/Strings-in-Cpp.png">
+       </center>
+       <br><br>
+       <p>&nbsp;&nbsp;&nbsp;&nbsp;Ways to Define a String in C++</p><br>
+       <p>&nbsp;&nbsp;&nbsp;&nbsp;Strings can be defined in several ways in C++. Strings can be accessed from the standard library using the string class. Character arrays can also be used to define strings. String provides a rich set of features, such as searching and manipulating, which are commonly used methods. Despite being less advanced than the string class, this method is still widely used, as it is more efficient and easier to use. Ways to define a string in C++ are:</p>
+       <br>
+       <ol>
+        <li><b> Using string Keyword</b></li><br>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;It is more convenient to define a string with the string keyword instead of using the array keyword because it is easy to write and understand.</p><br>
+        <h3>Syntax</h3><br>
+        <p>string s = "GeeksforGeeks";<br>
+            string s("GeeksforGeeks");</p>
+            <br>
+            <h3>Example:</h3>
+            <br>
+            <p>
+
+                
+
+// C++ Program to demonstrate use of string keyword
+#include &lt;iostream &gt;<br>
+using namespace std;<br>
+ 
+int main()<br>
+{<br>
+ 
+    string s = "GeeksforGeeks";<br>
+    string str("GeeksforGeeks");<br>
+ 
+    cout << "s = " << s << endl;<br>
+    cout << "str = " << str << endl;<br>
+ 
+    return 0;<br>
+}<br>
+            </p>
+            <br>
+            <li><b>How to Take String Input in C++</b></li>
+            <br>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;String input means accepting a string from a user. In C++. We have different types of taking input from the user which depend on the string. The most common way is to take input with cin keyword with the extraction operator (>>) in C++. Methods to take a string as input are:</p>
+            <br>
+            <h3>Using Cin</h3>
+            <br>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;The simplest way to take string input is to use the cin command along with the stream extraction operator (>>). </p>
+            <br>
+            <h3>Syntax</h3><br>
+            <p>cin>>s;</p><br>
+            <h3>Example</h3>
+            <br>
+            <p>
+                int main() <br>{<br>
+ 
+                    string s;<br>
+                     
+                  cout<<"Enter String"<<endl;<br>
+                    cin>>s;<br>
+                 
+                    cout<<"String is: "<<s<<endl;<br>
+                  return 0;<br>
+                }<br>
+            
+            </p>
+            <br>
+            <h3>Using getline </h3>
+            <br>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;The getline() function in C++ is used to read a string from an input stream. It is declared in the <string> header file.</p>
+                <br>
+                <h3>Syntax</h3><br>
+                <p>getline(cin,s);</p>
+                <br>
+                <h3>Example</h3>
+                <br>
+                <p>
+                    int main()<br>
+{<br>
+ 
+    string s;<br>
+    cout << "Enter String" << endl;<br>
+    getline(cin, s);<br>
+    cout << "String is: " << s << endl;<br>
+    return 0;<br>
+
+}<br>
+
+                </p>
+                <br>
+            </ol>
+           <h3>String inbuilt functions</h3>
+           <br>
+           <center>
+            <img src="https://images.shiksha.com/mediadata/ugcDocuments/images/wordpressImages/2022_04_image-67.jpg">
+           </center>
+
+
+</div>
+    <footer>
+      <p>©Copyright 2050 by nobody. All rights reversed.</p>
+    </footer>
+</body>
+</html>
+
+

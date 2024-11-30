@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>decision</title>
+    </head>
+    <style>
+    body, h1, h2, h3, p, ul, li, form, input
+    {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+   }
+
+   body{
+       text-align:justify;
+       font-family: 'Times New Roman', Times, serif;
+       font-style: normal;
+       font-size: 1rem; 
+   }
+   header {
+     background:whitesmoke;
+     color: black;
+     padding: 10px 0;
+     text-align: center;
+     font-family: 'Times New Roman', Times, serif;
+   }
+   nav {
+     background:whitesmoke;
+     padding: 10px;
+ }
+
+ nav ul {
+     list-style: none;
+     display: flex;
+     justify-content: center;
+ }
+
+ nav ul li {
+     margin: 0 15px;
+ }
+
+ nav ul li a {
+     color:black;
+     text-decoration: none;
+     font-weight: bold;
+ }
+
+ nav form {
+     margin-top: 10px;
+     text-align: center;
+ }
+
+ nav input[type="search"] {
+     padding: 5px;
+     width: 200px;
+ }
+
+ nav input[type="submit"] {
+     padding: 5px 10px;
+     background: whitesmoke;
+     color: black;
+     border: none;
+     cursor: pointer;
+ }
+
+ nav input[type="submit"]:hover {
+     background:whitesmoke;
+ }
+
+   footer {
+     background:whitesmoke;
+     color: black;
+     text-align: center;
+     padding: 10px 0;
+     margin-top: 40px;
+   }
+</style>
+<body>
+    <header>
+        <h1>C++ PROGRAMMING</h1>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="continueofheaderandfooter.html">Home</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="cplusinputoutput.html">Input&output</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="datatype.html">Datatype&variables</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="operator.html">Operators</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="decision.html">Decision Making</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="control.html">Control Statements</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="array.html">Arrays</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="string.html">Strings</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="function.html">Functions</a></li>&nbsp;&nbsp;&nbsp;
+          <li><a href="recursion.html">Recursion</a></li>&nbsp;&nbsp;&nbsp;
+
+
+
+        </ul>
+        <br>
+        <form>
+          <input type="search" name="q" placeholder="Search query" />
+          <input type="submit" value="Go!" />
+        </form>
+      </nav>
+      <div class="container">
+        <br><br>
+        <center>
+            <h3>
+                C++ Arrays
+            </h3>
+        </center>
+        
+        <br>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;In C++, an array is a data structure that is used to store multiple values of similar data types in a contiguous memory location.</p>
+        <br><p>&nbsp;&nbsp;&nbsp;&nbsp;For example, if we have to store the marks of 4 or 5 students then we can easily store them by creating 5 different variables but what if we want to store marks of 100 students or say 500 students then it becomes very challenging to create that numbers of variable and manage them. Now, arrays come into the picture that can do it easily by just creating an array of the required size.</p>
+        <br>
+        <center>
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230810103814/Arrays-in-C.png">
+
+        </center>
+        <br><br>
+        <h3>Array Declaration in C++</h3><br>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;In C++, we can declare an array by simply specifying the data type first and then the name of an array with its size.</p>
+        <br>
+        <h3>Syntax</h3>
+        <br>
+        <p>data_type array_name[Size_of_array];</p>
+        <br>
+        <center>
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230302092603/c-array-declaration.png">
+        </center>
+        <br><br>
+        <h3>Initialization of Array in C++</h3>
+        <br>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;In C++, we can initialize an array in many ways but we will discuss some most common ways to initialize an array. We can initialize an array at the time of declaration or after declaration.</p>
+        <br>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;We have initialized the array with values. The values enclosed in curly braces ‘{}’ are assigned to the array. Here, 1 is stored in arr[0], 2 in arr[1], and so on. Here the size of the array is 5.</p>
+        <br>
+        <h3>Example</h3>
+        <br>
+        <p>
+        int arr[5] = {1, 2, 3, 4, 5};
+    </p><br>
+    <h3>Initialize Array with Values and without Size in C++</h3><br>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;We have initialized the array with values but we have not declared the length of the array, therefore, the length of an array is equal to the number of elements inside curly braces.</p>
+    <br>
+    <h3>
+        Example
+    </h3><br>
+    <p>int arr[] = {1, 2, 3, 4, 5};</p>
+    <br>
+    <h3>Traverse an Array in C++</h3>
+    <br>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;We can traverse over the array with the help of a loop using indexing in C++. First, we have initialized an array ‘table_of_two’ with a multiple of 2. After that, we run a for loop from 0 to 9 because in an array indexing starts from zero. Therefore, using the indices we print all values stored in an array.</p>
+    <br>
+    <h3>Example</h3>
+    <br>
+    <p>
+        #include <iostream> <br>
+            using namespace std; <br>
+            
+            int main() <br>
+            { <br>
+            
+                // Initialize the array <br>
+                int table_of_two[10] <br>
+                    = { 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 }; <br>
+            
+                // Traverse the array using for loop <br>
+                for (int i = 0; i < 10; i++)  <br>{ <br>
+                    // Print the array elements using indexing <br>
+                    cout << table_of_two[i] << " "; <br>
+                } <br>
+            
+                return 0; <br>
+            }
+    </p> 
+    <br>
+    <h3>Multidimensional Arrays in C++</h3>
+    <br>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;Arrays declared with more than one dimension are called multidimensional arrays. The most widely used multidimensional arrays are 2D arrays and 3D arrays. These arrays are generally represented in the form of rows and columns.</p>
+    <br>
+    <h3>Syntax</h3>
+    <br>
+    <p>Data_Type Array_Name[Size1][Size2]...[SizeN];</p>
+    <br>
+    <h3>Two Dimensional Array in C++</h3>
+    <br>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;In C++, a two-dimensional array is a grouping of elements arranged in rows and columns. Each element is accessed using two indices: one for the row and one for the column, which makes it easy to visualize as a table or grid.</p>
+    <br>
+    <h3>Syntax</h3>
+    <br>
+    <p>data_Type array_name[n][m];</p>
+    <br>
+    <center>
+        <img src="https://media.geeksforgeeks.org/wp-content/uploads/two-d.png">
+    </center>
+    <br><br>
+    <h3>Example</h3>
+    <br>
+    <p>
+        #include &lt;iostream &gt;<br>
+            using namespace std;<br>
+            
+            int main()<br>
+            {<br>
+                // Declaring 2D array<br>
+                int arr[4][4];<br>
+            
+                // Initialize 2D array using loop<br>
+                for (int i = 0; i < 4; i++) <br>{<br>
+                    for (int j = 0; j < 4; j++) <br>{<br>
+                        arr[i][j] = i + j;<br>
+                    }<br>
+                }<br>
+            
+                // Printing the element of 2D array<br>
+                for (int i = 0; i < 4; i++) <br>{<br>
+                    for (int j = 0; j < 4; j++) <br>{<br>
+                        cout << arr[i][j] << " ";<br>
+                    }<br>
+                    cout << endl;<br>
+                }<br>
+            
+                return 0;<br>
+            }
+    </p>
+    <br>
+</div>
+    <footer>
+      <p>©Copyright 2050 by nobody. All rights reversed.</p>
+    </footer>
+</body>
+</html>
+
+
